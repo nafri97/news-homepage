@@ -1,0 +1,318 @@
+@font-face {
+    font-family: 'Inter-Bold';
+    src: url('/assets/fonts/static/Inter-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Inter-ExtraBold';
+    src: url('/assets/fonts/static/Inter-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('/assets/fonts/static/Inter-Regular.ttf') format('truetype');
+}
+
+/* ========= text attribute below ============ */
+*, html, body{
+    font-family: 'Inter-Regular',sans-serif ;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit
+}
+.attribution { font-size: 11px; float: right ;writing-mode: vertical-rl;transform: rotate(180deg);}
+.attribution a { color: hsl(228, 45%, 44%); font-size: inherit; }
+
+/* ========= text attribute above ============ */
+header{
+    margin :40px 5vw 20px;
+}
+header img{
+    float: left;
+    height: 48px;
+    width: 72px;
+}
+.article h2{
+    font-family: 'Inter-Bold', sans-serif;
+    font-size: 36px;
+    color: hsl(233, 8%, 79%);
+}
+#new h2{
+    font-family: 'Inter-ExtraBold',sans-serif;
+    color: hsl(35, 77%, 62%);
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+#new h3:hover{
+    color: hsl(35, 77%, 62%);
+}
+.card div h3:hover{
+    color:hsl(5, 85%, 63%);
+}
+h3{
+    font-family: 'Inter-Bold',sans-serif;
+    font-size: 18px; 
+    padding-bottom: 6px ;
+}
+h1{
+    font-family: 'Inter-ExtraBold',sans-serif;
+    color: black;
+    font-size: 55px;
+    width: 62%;
+}
+p, article{
+    color:  hsl(236, 13%, 42%); 
+    text-align: justify;
+}
+#new p{color: hsl(233, 8%, 79%)}
+hr{
+    border: 1px solid hsl(233, 8%, 79%);
+    margin: 20px 0;
+}
+h4{
+    margin-top: 20px;
+    font-size: 30px;
+    color: black;
+}
+
+label{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* ============= img vid attribute =============== */
+.mobile-img{
+    display: none;
+}
+#highlight img{
+    width : 100%;
+    height: auto;
+}
+.card img{
+    width: 30%;
+    height: auto;
+}
+/* =========== navbar attribute below ============ */
+
+nav{
+    display: flex;
+    margin: 40px 5vw 20px;
+    align-items: center;
+    justify-content: flex-end;
+    height: 48px;
+}
+#navbar{
+    display: flex;
+    flex-direction:row ;
+    list-style:none ;
+    margin-left: auto;
+}
+#navbar li a{padding: 12px;}
+#navbar li a:hover{color: hsl(5, 85%, 63%);}
+.dropdown,#openMenu, #closeMenu{display: none;}
+.dropdown li{
+    text-decoration: none;
+    list-style: none;
+    padding: 7px;
+}
+.cats:hover .dropdown{
+    display: block;
+    position: absolute;
+    background-color: hsl(36, 100%, 99%);
+    margin-top: 10px;
+    z-index: 1;
+}
+/* =========== navbar attribute above ============ */
+
+
+main{
+    position: relative;
+    margin: 0 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+#highlight{
+    width: 58.2%;
+}
+
+.flex{
+    margin:24px 0;
+    display: flex;
+    gap: 6%;
+}
+
+#new{
+    width: 23.5%;
+    background-color: hsl(240, 100%, 5%);
+    color: white;
+    margin-left: 3%;
+    padding: 2%;
+}
+
+#container{
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    margin-top: 20px;
+    max-width: 100vw;
+}
+
+.card{
+    width: 27.2%;
+    padding: 0;
+    display: flex;
+    gap: 7%;
+}
+
+
+.article{
+    width: 63%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button{
+    margin-top: 5vh;
+    padding: 10px;
+    width: 200px;
+    background-color: hsl(5, 85%, 63%);
+    color: hsl(36, 100%, 99%);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: hsl(240, 100%, 5%);
+}
+
+/* =================
+MOBILE RESPONSIVE 
+================= */
+
+@media screen and (max-width: 768px){
+
+    /* =========== text attribute ============ */
+    h1{
+        font-size: max(6vw, 24px);
+        width: 100%;
+    }
+    .attribution{ display: none;}
+    /* =========== img vid attribute =========== */
+    .mobile-img{display: block;}
+    .desktop-img{display: none;}
+    /* ======== navbar attribute below ========== */
+    
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        background-color:hsl(36, 100%, 99%);
+        padding :40px 5vw 20px;
+        margin: 0;
+    }
+
+    #navbar {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: hsl(36, 100%, 99%);
+        height: 100%;
+        width: max(50%, 240px );
+        z-index: 2;
+        overflow-x: hidden;
+        justify-content: left;
+        padding-top: 100px;
+        transition: all 0.5s ease-in-out;
+    }
+        
+    #openMenu {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 0;
+        padding: 20px;
+        z-index: 3;
+        background-color: hsl(36, 100%, 99%);
+    }
+        
+    #closeMenu {
+        position: fixed;
+        top: 20px;
+        right: 0;
+        padding: 20px;
+        z-index: 3;
+        background-color: hsl(36, 100%, 99%);
+    }
+    #navbar li{
+        padding: 10px;
+    }
+    #navbar li a:hover{
+        color: black;
+    }
+        
+    #navbar li a{
+        text-align: left;
+        font-size: 22px;
+        margin-top: 30px;
+    }
+    .dropdown li a{
+        padding: 0px;
+        text-align: left;
+        font-size: 15px;
+        font-family: 'Inter-Regular',sans-serif;
+    }
+
+    .cats .dropdown {
+        display: none;
+        position: absolute;
+        color:  hsl(5, 85%, 63%);
+        margin-top: 0px;
+        margin-left: 20px;
+        z-index: 1;
+    }
+    /* ======== navbar attribute above ========== */
+    main{
+        position: relative;
+        margin: 0 3vw;
+        width: 92vw;
+    }
+    
+    .flex{
+    margin:24px 0;
+    display: block;
+    gap: 0;
+    }
+    #highlight{
+        width: 100%;
+    }
+    #new{
+        width: 100%;
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    #container{
+        flex-direction: column;
+        gap: 3%;
+        margin-top: 20px;
+    }
+    .card{
+        width: 100%;
+        margin: 20px 0;
+    }
+    
+    .article{
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+}
